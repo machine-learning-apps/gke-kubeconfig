@@ -16,6 +16,6 @@ jobs:
     - name: Test Kubeconfig File
       uses: docker://bitnami/kubectl:latest
       with:
-        args: -n get nodes
+        args: get namespaces
       env:
         KUBECONFIG: '/github/workspace/.kube/config'
