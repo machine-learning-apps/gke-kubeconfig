@@ -49,7 +49,7 @@ jobs:
     - name: Test Kubeconfig File
       uses: docker://bitnami/kubectl:latest
       with:
-        args: -n get nodes
+        args: get namespaces
       env:
         # Setting the environment variable KUBECONFIG sets the default config file that kubectl looks for.
         KUBECONFIG: '/github/workspace/.kube/config'
