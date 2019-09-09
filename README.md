@@ -57,7 +57,10 @@ jobs:
 
 ### Mandatory Arguments
 
-1. `APPLICATION_CREDENTIALS`: base64 encoded GCP application credentials (https://cloud.google.com/sdk/docs/authorizing)
+1. `APPLICATION_CREDENTIALS`: base64 encoded GCP application credentials (https://cloud.google.com/sdk/docs/authorizing).  To base64 encode your credentails, you can run this command:
+
+    > cat your-gke-credentials.json | base64
+
 2. `PROJECT_ID`: Name of the GCP Project where the GKE K8s cluster resides.
 3. `LOCATION_ZONE`: The location-zone where your GKE K8s cluster resides, for example, `us-west1-a`
 4. `CLUSTER_NAME`: The name of your GKE K8s cluster.
