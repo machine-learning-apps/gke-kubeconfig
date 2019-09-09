@@ -8,7 +8,7 @@
 
 - Inside a Docker container running in Actions, $GITHUB_WORKSPACE is mounted such that this directory always equals `/github/workspace`. **Therefore, the kubeconfig file in a subsequent action running in a Docker container can be found at `/github/workspace/.kube/config`**
 
-- Outside a Docker container $GITHUB_WORKSPACE is not `/github/workspace` but rather a different directory.  
+- Note that outside a Docker container $GITHUB_WORKSPACE is not `/github/workspace` (you must reference the environment variable to see the directory). 
 
 The purpose of this action is to retrieve a kubeconfig file so that other actions can use `kubectl` to interact with your GKE cluster.  An overview of how to retrieve this config file manually are located in [these docs](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl)
 
@@ -58,6 +58,6 @@ jobs:
 ### Mandatory Arguments
 
 1. `APPLICATION_CREDENTIALS`: base64 encoded GCP application credentials (https://cloud.google.com/sdk/docs/authorizing)
-2. `PROJECT_ID`: Name of the GCP Project where the GKE K8s cluster resides. 
+2. `PROJECT_ID`: Name of the GCP Project where the GKE K8s cluster resides.
 3. `LOCATION_ZONE`: The location-zone where your GKE K8s cluster resides, for example, `us-west1-a`
-4. `CLUSTER_NAME`: The name of your GKE K8s cluster
+4. `CLUSTER_NAME`: The name of your GKE K8s cluster.
