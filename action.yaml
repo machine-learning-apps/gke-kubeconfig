@@ -1,0 +1,22 @@
+name: 'gke-argo'
+description: Fetch a GKE kubeconfig file using your GCP credentials
+author: Hamel Husain
+inputs:
+  application_credentials:
+    description: base64 encoded GCP application credentials (https://cloud.google.com/sdk/docs/authorizing)
+    require: true
+  project_id:
+    description: name of the GCP Project where the GKE K8s cluster resides. 
+    require: true
+  location_zone:
+    description: The location-zone where your GKE K8s cluster resides, for example `us-west1-a`
+    require: true
+  cluster_name:
+    description: The name of your GKE K8s cluster
+    require: true
+branding:
+  color: 'blue'
+  icon: 'download'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
