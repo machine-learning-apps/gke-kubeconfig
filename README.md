@@ -1,4 +1,4 @@
-![Actions Status](https://github.com/machine-learning-apps/gke-kubeconfig/workflows/Integration%20Test/badge.svg)
+![Actions Status](https://github.com/machine-learning-apps/gke-kubeconfig/workflows/Build/badge.svg)
 
 ## This Action retrieves a [kubeconfig file](https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-multiple-clusters/) from [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/)
 
