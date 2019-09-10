@@ -39,13 +39,13 @@ jobs:
     steps:
       # this action will save the kubeconfig file to `/github/workspace/.kube/config`, which is visible to subsequent steps.
     - name: Get kubeconfig file from GKE
-      id: argo
       uses: machine-learning-apps/gke-kubeconfig@master
       with:
         application_credentials: ${{ secrets.APPLICATION_CREDENTIALS }}
         project_id: ${{ secrets.PROJECT_ID }}
         location_zone: ${{ secrets.LOCATION_ZONE }}
         cluster_name: ${{ secrets.CLUSTER_NAME }}
+        
     - name: Test Kubeconfig File
       uses: docker://bitnami/kubectl:latest
       with:
