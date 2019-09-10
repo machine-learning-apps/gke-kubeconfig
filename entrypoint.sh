@@ -59,6 +59,7 @@ cd $GITHUB_WORKSPACE
 echo "$INPUT_APPLICATION_CREDENTIALS" | base64 -d > /tmp/account.json
 
 # Use gcloud CLI to retrieve k8s authentication
+gcloud components install kubectl
 gcloud auth activate-service-account --key-file=/tmp/account.json
 gcloud config set project "$INPUT_PROJECT_ID"
 gcloud container clusters get-credentials "$INPUT_CLUSTER_NAME" --zone "$INPUT_LOCATION_ZONE" --project "$INPUT_PROJECT_ID"
