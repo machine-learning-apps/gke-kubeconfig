@@ -10,5 +10,7 @@ LABEL "maintainer"="Hamel Husain <hamel.husain@gmail.com>"
 
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+RUN gcloud components install kubectl
+
 
 ENTRYPOINT ["/entrypoint.sh"]
