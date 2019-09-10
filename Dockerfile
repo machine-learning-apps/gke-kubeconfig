@@ -1,4 +1,4 @@
-FROM google/cloud-sdk
+FROM google/cloud-sdk:alpine
 
 LABEL "com.github.actions.name"="Get kubeconfig file from GKE"
 LABEL "com.github.actions.description"="Get kubeconfig file from Google Kubernetes Engine (GKE) for kubectl"
