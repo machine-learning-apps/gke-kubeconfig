@@ -64,3 +64,6 @@ jobs:
 2. `PROJECT_ID`: Name of the GCP Project where the GKE K8s cluster resides.
 3. `LOCATION_ZONE`: The location-zone where your GKE K8s cluster resides, for example, `us-west1-a`
 4. `CLUSTER_NAME`: The name of your GKE K8s cluster.
+
+## Keywords
+ MLOps, Machine Learning, Data Science
