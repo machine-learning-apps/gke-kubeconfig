@@ -19,4 +19,4 @@ branding:
   icon: 'download'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'docker://hamelsmu/gke-kubeconfig'
